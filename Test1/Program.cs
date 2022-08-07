@@ -9,3 +9,16 @@ for(int i = 0; i < number; i++)
     arrayOfString[i] = currentString;
 }
 Console.WriteLine(string.Join(",",arrayOfString));
+
+string[] newArrayOfString = new string[number];
+int count = 0;
+for(int i = 0; i < number; i++)
+{
+    if(arrayOfString[i].Length <= 3)
+    {
+        newArrayOfString[count] = arrayOfString[i];
+        count++;
+    }
+}
+Console.Write("Новый массив равен: ");
+Console.WriteLine(string.Join(",",newArrayOfString));
