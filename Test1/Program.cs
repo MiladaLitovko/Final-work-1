@@ -8,9 +8,21 @@ for(int i = 0; i < number; i++)
     string currentString = Console.ReadLine();
     arrayOfString[i] = currentString;
 }
+Console.Write("Массив равен: ");
 Console.WriteLine(string.Join(",",arrayOfString));
 
-string[] newArrayOfString = new string[number];
+
+int countOfLength = 0;
+
+for(int i = 0; i < number; i++)
+{
+    if(arrayOfString[i].Length <= 3)
+    {
+        countOfLength++;
+    }
+}
+
+string[] newArrayOfString = new string[countOfLength];
 int count = 0;
 for(int i = 0; i < number; i++)
 {
